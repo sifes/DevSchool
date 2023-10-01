@@ -14,5 +14,4 @@ function council(arr, d) {
     }
     return sum;
 }
-
 console.log(council([1, 5, 6, 3, 4, 2], 3)); //6

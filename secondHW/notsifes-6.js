@@ -8,7 +8,6 @@ function landPerimeter(arr) {
             }
         }
     }
-
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[0].length - 1; j++) {
             if (arr[i][j] === 'X' && arr[i][j + 1] === 'X') {
@@ -22,7 +21,6 @@ function landPerimeter(arr) {
 
     return res;
 }
-
 console.log(landPerimeter(
     ['XOOO',
         'XOXO',
