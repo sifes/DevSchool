@@ -1,6 +1,5 @@
 function landPerimeter(arr) {
     let res = 0;
-
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[0].length; j++) {
             if (arr[i][j] === 'X') {
@@ -9,7 +8,7 @@ function landPerimeter(arr) {
         }
     }
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[0].length - 1; j++) {
+        for (let j = 0; j < arr[0].length; j++) {
             if (arr[i][j] === 'X' && arr[i][j + 1] === 'X') {
                 res -= 2;
             }
@@ -18,12 +17,24 @@ function landPerimeter(arr) {
             }
         }
     }
-
     return res;
 }
-console.log(landPerimeter(
-    ['XOOO',
-        'XOXO',
-        'XOXO',
-        'OOXX',
-        'OOOO'])); // 18
+console.log(landPerimeter([
+    "XOOOXOO",
+    "OXOOOOO",
+    "XOXOXOO",
+    "OXOXXOO",
+    "OOOOOXX",
+    "OOOXOXX",
+    "XXXXOXO"]
+)); // 54
+
+console.log(landPerimeter([
+    "OOOOXO",
+    "XOXOOX",
+    "XXOXOX",
+    "XOXOOO",
+    "OOOOOO",
+    "OOOXOO",
+    "OOXXOO"]
+)); // 40
